@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE PARGE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #080808;
+      color: #f0f0f0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      border-bottom: 1px solid #1a1a1a;
+      position: sticky;
+      top: 0;
+      background: #080808;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: #666;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    nav ul a:hover { color: #fff; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+      border-bottom: 1px solid #1a1a1a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #2a0a0a 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero .date {
+      font-size: 13px;
+      letter-spacing: 0.3em;
+      color: #ff3333;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 96px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .hero .subtitle {
+      font-size: 14px;
+      letter-spacing: 0.4em;
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid #ff3333;
+      color: #ff3333;
+      padding: 14px 40px;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background: #ff3333;
+      color: #fff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      color: #ff3333;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+
+    .lineup {
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .artist {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .artist h3 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .artist span {
+      font-size: 12px;
+      color: #444;
+      letter-spacing: 0.2em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: #1a1a1a;
+      border: 1px solid #1a1a1a;
+    }
+
+    .info-item {
+      background: #080808;
+      padding: 32px 24px;
+    }
+
+    .info-item .label {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .info-item .value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .ticket {
+      text-align: center;
+      padding: 80px 24px;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .ticket h2 {
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    .ticket p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 32px;
+      letter-spacing: 0.1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 12px;
+      color: #333;
+      letter-spacing: 0.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">THE PARGE</div>
+    <ul>
+      <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#ticket">Ticket</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p class="date">2026.08.15 — Underground Festival</p>
+    <h1>THE<br>PARGE</h1>
+    <p class="subtitle">The Darkest Night of the Year</p>
+    <a href="#ticket" class="btn">Get Ticket</a>
+  </div>
+
+  <section id="lineup">
+    <p class="section-label">— Lineup</p>
+    <div class="lineup">
+      <div class="artist">
+        <h3>Fuji Trill</h3>
+        <span>Headliner</span>
+      </div>
+      <div class="artist">
+        <h3>YTG</h3>
+        <span>Special Act</span>
+      </div>
+      <div class="artist">
+        <h3>Six</h3>
+        <span>Special Act</span>
+      </div>
+      <div class="artist">
+        <h3>Jellyy</h3>
+        <span>Opening Act</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="info">
+    <p class="section-label">— Info</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <p class="label">Date</p>
+        <p class="value">2026.08.15</p>
+      </div>
+      <div class="info-item">
+        <p class="label">Open / Start</p>
+        <p class="value">17:00 / 18:00</p>
+      </div>
+      <div class="info-item">
+        <p class="label">Venue</p>
+        <p class="value">Tokyo Underground</p>
+      </div>
+      <div class="info-item">
+        <p class="label">Ticket</p>
+        <p class="value">¥3,500</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticket" id="ticket">
+    <h2>GET YOUR TICKET</h2>
+    <p>枚数限定。売り切れ次第終了。</p>
+    <a href="#" class="btn">今すぐ購入</a>
+  </div>
+
+  <footer>
+    © 2026 THE PARGE — ALL RIGHTS RESERVED
+  </footer>
+
+</body>
+</html>

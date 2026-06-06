@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>れん | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 48px;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    nav ul a:hover { color: #111; }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .btn:hover { background: #333; }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .work-card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .work-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .work-card p {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .work-card .tag {
+      display: inline-block;
+      background: #f4f4f4;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #555;
+      margin-top: 12px;
+    }
+
+    .contact p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .contact a {
+      color: #111;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">ren</div>
+    <ul>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Hi, I'm れん 👋</h1>
+    <p>Web制作・デザインをやっています。<br>音楽が好きな大学生です。</p>
+    <a href="#contact" class="btn">お仕事の依頼はこちら</a>
+  </section>
+
+  <section id="works">
+    <h2>Works</h2>
+    <div class="works-grid">
+      <div class="work-card">
+        <h3>自己紹介サイト</h3>
+        <p>最初に作ったプロフィールページです。</p>
+        <span class="tag">HTML / CSS</span>
+      </div>
+      <div class="work-card">
+<h3>THE PARGE</h3>
+<p>架空のアングラ音楽フェスのサイトです。</p>
+<span class="tag">HTML / CSS</span><br><br>
+<a href="festival.html" style="font-size:13px; color:#111;">サイトを見る →</a>
+</div>
+      <div class="work-card">
+        <h3>作品3（準備中）</h3>
+        <p>近日公開予定です。</p>
+        <span class="tag">HTML / CSS</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>お仕事のご依頼・ご相談はメールでお気軽にどうぞ。</p>
+    <a href="mailto:nniho9794@gmail.com">nniho9794@gmail.com</a>
+  </section>
+
+  <footer>
+    <p>© 2026 ren</p>
+  </footer>
+
+</body>
+</html>
